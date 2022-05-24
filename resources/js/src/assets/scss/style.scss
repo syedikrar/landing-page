@@ -1,0 +1,89 @@
+/* 
+Swiper Slider Changes
+#post-slider .slick-arrow { top: 14px; }
+
+ltr
+#post-slider .slick-arrow.left { left: auto; right: 70px; }
+#post-slider .slick-arrow.right { left: auto; right: 35px; }
+
+rtl
+#post-slider .slick-arrow.left { right: auto; left: 35px; }
+#post-slider .slick-arrow.right { right: auto; left: 70px; }
+*/
+// Animate css
+@import "~animate.css/animate.min.css";
+@import '~node-snackbar/src/sass/snackbar.sass';
+@import "../css/variable";
+[dir="ltr"] {
+  &[mode="light"] {
+    @import "../css/bootstrap";
+    @import "../css/light/typography";
+    @import "../css/light/style";
+    @import "../css/light/responsive";
+  }
+  &[mode="dark"] {
+    @import "../css/bootstrap";
+    @import "../css/dark/typography";
+    @import "../css/dark/style";
+    @import "../css/dark/responsive";
+  }
+}
+
+[dir="rtl"]{
+  &[mode="light"] {
+    @import "../css/animate.css";
+    @import "../css/bootstrap";
+    @import "../css/rtl/light/typography";
+    @import "../css/rtl/light/style";
+    @import "../css/rtl/light/responsive";
+  }
+  &[mode="dark"] {
+    @import "../css/animate.css";
+    @import "../css/bootstrap";
+    @import "../css/rtl/dark/typography";
+    @import "../css/rtl/dark/style";
+    @import "../css/rtl/dark/responsive";
+  }
+}
+
+.iq-global-search>ul>li a, .slick-arrow, .breadcrumb-item>a{
+  color: var(--iq-primary);
+  &:hover{
+    color: var(--iq-primary);
+  }
+}
+.table thead tr {
+  background: var(--iq-light-border);
+}
+.table-borderlesss tbody tr td {
+  border-bottom: 2px solid var(--iq-light-border);
+  vertical-align: middle;
+}
+.table-borderlesss {
+  border: 2px solid var(--iq-light-border);
+  border-radius: 8px;
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  /* border-collapse: separate; */
+  /* border-spacing: 0; */
+}
+.table-borderlesss .table{
+  margin-bottom: 0!important;
+}
+.nav-disabled {
+  cursor: not-allowed
+}
+.nav-disabled a{
+  pointer-events: none;
+}
+.preview-btn{
+  position: absolute;
+  top:0;
+  right: 0;
+}
+.w-350{
+  width: 350px;
+}
+// Font awesome icon Css
+@import "~@fortawesome/fontawesome-free/css/all.min.css";

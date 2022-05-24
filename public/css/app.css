@@ -1,0 +1,33 @@
+var map = {
+	"./amex.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/amex.svg",
+	"./aura.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/aura.svg",
+	"./diners.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/diners.svg",
+	"./discover.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/discover.svg",
+	"./elo.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/elo.svg",
+	"./generic01.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/generic01.svg",
+	"./generic02.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/generic02.svg",
+	"./hipercard.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/hipercard.svg",
+	"./jcb.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/jcb.svg",
+	"./mastercard.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/mastercard.svg",
+	"./visa.svg": "./node_modules/vue-ccard/dist/assets/cc-brands/visa.svg"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	return __webpack_require__(id);
+}
+function webpackContextResolve(req) {
+	if(!__webpack_require__.o(map, req)) {
+		var e = new Error("Cannot find module '" + req + "'");
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return map[req];
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./node_modules/vue-ccard/dist/assets/cc-brands sync \\.svg$";
